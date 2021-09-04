@@ -1,4 +1,3 @@
-
 .container {
   max-width: 1440px;
   margin: 0 auto;
@@ -24,6 +23,14 @@
   grid-template-areas:
     "projects projects"
     "blog resume";
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "projects"
+      "blog"
+      "resume";
+  }
 }
 
 .projects {
@@ -46,10 +53,50 @@
   border: 2px solid var(--black-light);
   transition: all 0.3s ease 0s;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   &:hover {
     cursor: pointer;
     border: 2px solid var(--blue-light);
     box-shadow: 0 0 10px 1px rgba(0, 180, 219, 0.5);
+  }
+
+  &.notAllowed {
+    border: 2px solid var(--black-light);
+    cursor: not-allowed;
+    box-shadow: initial;
+  }
+
+  span {
+    font-size: 0.75rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--text-grey);
+  }
+}
+
+.nav__icon {
+  position: absolute;
+  top: 32px;
+  right: 24px;
+
+  img {
+    width: 32px;
+    height: 32px;
+    color: #fff;
   }
 }
 
