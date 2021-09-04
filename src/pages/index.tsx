@@ -1,18 +1,22 @@
 import type { NextPage } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
 import styles from "../styles/home.module.scss";
 
-import htmlImg from '../assets/technologies/html.svg'
-import cssImg from '../assets/technologies/css.svg'
-import javascriptImg from '../assets/technologies/javascript.svg'
-import sassImg from '../assets/technologies/sass.svg'
-import reactImg from '../assets/technologies/react.svg'
-import nextjsImg from '../assets/technologies/nextjs.svg'
-import gitImg from '../assets/technologies/git.svg'
-import figmaImg from '../assets/technologies/figma.svg'
-import windowsImg from '../assets/technologies/windows.svg'
-import vscodeImg from '../assets/technologies/vscode.svg'
+import projectsImg from "../assets/projects.svg";
+import blogImg from "../assets/blog.svg";
+import resumeImg from "../assets/resume.svg";
+import htmlImg from "../assets/technologies/html.svg";
+import cssImg from "../assets/technologies/css.svg";
+import javascriptImg from "../assets/technologies/javascript.svg";
+import sassImg from "../assets/technologies/sass.svg";
+import reactImg from "../assets/technologies/react.svg";
+import nextjsImg from "../assets/technologies/nextjs.svg";
+import gitImg from "../assets/technologies/git.svg";
+import figmaImg from "../assets/technologies/figma.svg";
+import windowsImg from "../assets/technologies/windows.svg";
+import vscodeImg from "../assets/technologies/vscode.svg";
 
 const Home: NextPage = () => {
   return (
@@ -22,21 +26,36 @@ const Home: NextPage = () => {
           <div className={styles.content__navigation}>
             <h3>Menu</h3>
             <nav className={styles.navigation}>
-              <div className={`${styles.nav__card} ${styles.projects}`}>
-                <span>See some</span>
-                <h2>Projects</h2>
-                <p>Personal or created during courses and bootcamps.</p>
-              </div>
-              <div className={`${styles.nav__card} ${styles.blog}`}>
-                <span>See some</span>
-                <h2>Blog</h2>
-                <p>Quick posts, tips and tricks, tools and more.</p>
-              </div>
-              <div className={`${styles.nav__card} ${styles.resume}`}>
-                <span>See some</span>
-                <h2>Resume</h2>
-                <p>My career, positions, companies and more. </p>
-              </div>
+              <Link href="https://github.com/rafaasimi?tab=repositories" passHref>
+                <div className={`${styles.nav__card} ${styles.projects}`}>
+                  <span>See some</span>
+                  <h2>Projects</h2>
+                  <p>Personal or created during courses and bootcamps.</p>
+                  <div className={styles.nav__icon}>
+                    <Image src={projectsImg} alt="Projects" />
+                  </div>
+                </div>
+              </Link>
+              <Link href="" passHref >
+                <div className={`${styles.nav__card} ${styles.blog} ${styles.notAllowed}`}>
+                  <span>See some</span>
+                  <h2>Blog</h2>
+                  <p>Quick posts, tips and tricks, tools and more.</p>
+                  <div className={styles.nav__icon}>
+                    <Image src={blogImg} alt="Blog" />
+                  </div>
+                </div>
+              </Link>
+              <Link href="" passHref>
+                <div className={`${styles.nav__card} ${styles.resume} ${styles.notAllowed}`}>
+                  <span>See some</span>
+                  <h2>Resume</h2>
+                  <p>My career, positions, companies and more. </p>
+                  <div className={styles.nav__icon}>
+                    <Image src={resumeImg} alt="Resume" />
+                  </div>
+                </div>
+              </Link>
             </nav>
           </div>
 
@@ -58,16 +77,16 @@ const Home: NextPage = () => {
               development.
             </p>
             <div className={styles.technologies}>
-              <Image src={htmlImg} alt="HTML5"/>
-              <Image src={cssImg} alt="CSS3"/>
-              <Image src={javascriptImg} alt="JavaScript"/>
-              <Image src={sassImg} alt="Sass"/>
-              <Image src={reactImg} alt="ReactJS"/>
-              <Image src={nextjsImg} alt="NextJS"/>
-              <Image src={gitImg} alt="Git"/>
-              <Image src={figmaImg} alt="Figma"/>
-              <Image src={windowsImg} alt="Windows"/>
-              <Image src={vscodeImg} alt="Visual Studio Code"/>
+              <Image src={htmlImg} alt="HTML5" />
+              <Image src={cssImg} alt="CSS3" />
+              <Image src={javascriptImg} alt="JavaScript" />
+              <Image src={sassImg} alt="Sass" />
+              <Image src={reactImg} alt="ReactJS" />
+              <Image src={nextjsImg} alt="NextJS" />
+              <Image src={gitImg} alt="Git" />
+              <Image src={figmaImg} alt="Figma" />
+              <Image src={windowsImg} alt="Windows" />
+              <Image src={vscodeImg} alt="Visual Studio Code" />
             </div>
           </div>
         </div>
