@@ -24,6 +24,8 @@ export default class MyDocument extends Document {
           <meta property="twitter:description" content="I’m passionate about front-end development and how everything can be I transformed through lines of code on amazing screens." />
           <meta property="twitter:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png" />
           
+          <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"/>
           <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet"/>
