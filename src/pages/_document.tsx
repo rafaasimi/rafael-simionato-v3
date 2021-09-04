@@ -7,7 +7,6 @@ export default class MyDocument extends Document {
       <Html>
         <Head>
           {/* <!-- Primary Meta Tags --> */}
-          <title>Rafael Simionato - Front-end Developer</title>
           <meta name="title" content="Rafael Simionato - Front-end Developer" />
           <meta name="description" content="I’m passionate about front-end development and how everything can be I transformed through lines of code on amazing screens." />
 
