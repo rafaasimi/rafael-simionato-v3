@@ -136,6 +136,17 @@
       color: var(--text-grey);
     }
   }
+
+  a {
+    color: #0083b0;
+    text-decoration: underline dotted;
+    text-underline-position: under;
+    transition: all 0.3s;
+
+    &:hover {
+      color: #00b4db;
+    }
+  }
 }
 
 .technologies {
@@ -155,5 +166,43 @@
     &:hover {
       transform: scale(1.1);
     }
+  }
+}
+
+.content__socials {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 4rem;
+
+  .socials__profile {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .socials__icons {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .socials__icons img {
+    fill: #fff;
+  }
+}
+
+@media (max-width: 426px) {
+  .content__socials {
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .socials__icons {
+    flex-direction: column;
+    align-items: center;
   }
 }
