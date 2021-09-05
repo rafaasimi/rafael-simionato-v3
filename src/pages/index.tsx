@@ -29,52 +29,52 @@ const Home: NextPage = () => {
       <div className={styles.container}>
         <div className={styles.content}>
           <div>
-          <div
-            className={`${styles.content__navigation} animate__animated animate__bounceInLeft`}
-          >
-            <h3>Menu</h3>
-            <nav className={styles.navigation}>
-              <a
-                href="https://github.com/rafaasimi?tab=repositories"
-                target="_new"
-                className={styles.projects}
-              >
-                <div className={`${styles.nav__card}`}>
-                  <span>See some</span>
-                  <h2>Projects</h2>
-                  <p>Personal or created during courses and bootcamps.</p>
-                  <div className={styles.nav__icon}>
-                    <Image src={projectsImg} alt="Projects" />
-                  </div>
-                </div>
-              </a>
-
-              <Link href="" passHref>
-                <div
-                  className={`${styles.nav__card} ${styles.blog} ${styles.notAllowed}`}
+            <div
+              className={`${styles.content__navigation} animate__animated animate__bounceInLeft`}
+            >
+              <h3>Menu</h3>
+              <nav className={styles.navigation}>
+                <a
+                  href="https://github.com/rafaasimi?tab=repositories"
+                  target="_new"
+                  className={styles.projects}
                 >
-                  <span>See some</span>
-                  <h2>Blog</h2>
-                  <p>Quick posts, tips and tricks, tools and more.</p>
-                  <div className={styles.nav__icon}>
-                    <Image src={blogImg} alt="Blog" />
+                  <div className={`${styles.nav__card}`}>
+                    <span>See some</span>
+                    <h2>Projects</h2>
+                    <p>Personal or created during courses and bootcamps.</p>
+                    <div className={styles.nav__icon}>
+                      <Image src={projectsImg} alt="Projects" />
+                    </div>
                   </div>
-                </div>
-              </Link>
+                </a>
 
-              <Link href="" passHref>
-                <div
-                  className={`${styles.nav__card} ${styles.resume} ${styles.notAllowed}`}
-                >
-                  <span>See some</span>
-                  <h2>Resume</h2>
-                  <p>My career, positions, companies and more. </p>
-                  <div className={styles.nav__icon}>
-                    <Image src={resumeImg} alt="Resume" />
+                <Link href="" passHref>
+                  <div
+                    className={`${styles.nav__card} ${styles.blog} ${styles.notAllowed}`}
+                  >
+                    <span>See some</span>
+                    <h2>Blog</h2>
+                    <p>Quick posts, tips and tricks, tools and more.</p>
+                    <div className={styles.nav__icon}>
+                      <Image src={blogImg} alt="Blog" />
+                    </div>
                   </div>
-                </div>
-              </Link>
-            </nav>
+                </Link>
+
+                <Link href="" passHref>
+                  <div
+                    className={`${styles.nav__card} ${styles.resume} ${styles.notAllowed}`}
+                  >
+                    <span>See some</span>
+                    <h2>Resume</h2>
+                    <p>My career, positions, companies and more. </p>
+                    <div className={styles.nav__icon}>
+                      <Image src={resumeImg} alt="Resume" />
+                    </div>
+                  </div>
+                </Link>
+              </nav>
             </div>
 
             <div
@@ -84,15 +84,26 @@ const Home: NextPage = () => {
                 <Image src={profileImg} alt="Rafael Simionato" />
               </div>
 
-              <div className={styles.socials__icons}>
-                <Image src={linkedinImg} alt="Linkedin" /> Linkedin
-              </div>
-              <div className={styles.socials__icons}>
-                <Image src={git2Img} alt="GitHub" /> GitHub
-              </div>
-              <div className={styles.socials__icons}>
-                <Image src={emailImg} alt="Email" /> Contato
-              </div>
+              <a
+                href="https://www.linkedin.com/in/rafaelzorzenon/"
+                target="_new"
+              >
+                <div className={styles.socials__icons}>
+                  <Image src={linkedinImg} alt="Linkedin" /> Linkedin
+                </div>
+              </a>
+
+              <a href="https://github.com/rafaasimi" target="_new">
+                <div className={styles.socials__icons}>
+                  <Image src={git2Img} alt="GitHub" /> GitHub
+                </div>
+              </a>
+
+              <a href="mailto:rafaasimi@hotmail.com">
+                <div className={styles.socials__icons}>
+                  <Image src={emailImg} alt="Email" /> Contato
+                </div>
+              </a>
             </div>
           </div>
 
