@@ -1,12 +1,17 @@
+import styles from "../styles/home.module.scss";
+
 import type { NextPage } from "next";
 import Image from "next/image";
 import Link from "next/link";
-
-import styles from "../styles/home.module.scss";
+import "animate.css";
 
 import projectsImg from "../assets/projects.svg";
 import blogImg from "../assets/blog.svg";
 import resumeImg from "../assets/resume.svg";
+import profileImg from "../assets/profile.png";
+import linkedinImg from "../assets/socials/linkedin.svg";
+import git2Img from "../assets/socials/git.svg";
+import emailImg from "../assets/socials/email.svg";
 import htmlImg from "../assets/technologies/html.svg";
 import cssImg from "../assets/technologies/css.svg";
 import javascriptImg from "../assets/technologies/javascript.svg";
@@ -23,11 +28,18 @@ const Home: NextPage = () => {
     <section id={styles.homepage}>
       <div className={styles.container}>
         <div className={styles.content}>
-          <div className={styles.content__navigation}>
+          <div>
+          <div
+            className={`${styles.content__navigation} animate__animated animate__bounceInLeft`}
+          >
             <h3>Menu</h3>
             <nav className={styles.navigation}>
-              <Link href="https://github.com/rafaasimi?tab=repositories" passHref>
-                <div className={`${styles.nav__card} ${styles.projects}`}>
+              <a
+                href="https://github.com/rafaasimi?tab=repositories"
+                target="_new"
+                className={styles.projects}
+              >
+                <div className={`${styles.nav__card}`}>
                   <span>See some</span>
                   <h2>Projects</h2>
                   <p>Personal or created during courses and bootcamps.</p>
@@ -35,9 +47,12 @@ const Home: NextPage = () => {
                     <Image src={projectsImg} alt="Projects" />
                   </div>
                 </div>
-              </Link>
-              <Link href="" passHref >
-                <div className={`${styles.nav__card} ${styles.blog} ${styles.notAllowed}`}>
+              </a>
+
+              <Link href="" passHref>
+                <div
+                  className={`${styles.nav__card} ${styles.blog} ${styles.notAllowed}`}
+                >
                   <span>See some</span>
                   <h2>Blog</h2>
                   <p>Quick posts, tips and tricks, tools and more.</p>
@@ -46,8 +61,11 @@ const Home: NextPage = () => {
                   </div>
                 </div>
               </Link>
+
               <Link href="" passHref>
-                <div className={`${styles.nav__card} ${styles.resume} ${styles.notAllowed}`}>
+                <div
+                  className={`${styles.nav__card} ${styles.resume} ${styles.notAllowed}`}
+                >
                   <span>See some</span>
                   <h2>Resume</h2>
                   <p>My career, positions, companies and more. </p>
@@ -57,9 +75,30 @@ const Home: NextPage = () => {
                 </div>
               </Link>
             </nav>
+            </div>
+
+            <div
+              className={`${styles.content__socials} animate__animated animate__bounceInUp`}
+            >
+              <div className={styles.socials__profile}>
+                <Image src={profileImg} alt="Rafael Simionato" />
+              </div>
+
+              <div className={styles.socials__icons}>
+                <Image src={linkedinImg} alt="Linkedin" /> Linkedin
+              </div>
+              <div className={styles.socials__icons}>
+                <Image src={git2Img} alt="GitHub" /> GitHub
+              </div>
+              <div className={styles.socials__icons}>
+                <Image src={emailImg} alt="Email" /> Contato
+              </div>
+            </div>
           </div>
 
-          <div className={styles.content__description}>
+          <div
+            className={`${styles.content__description} animate__animated animate__bounceInRight`}
+          >
             <h3>About me</h3>
             <h1>Hello, I’m Rafael Simionato</h1>
             <p>
