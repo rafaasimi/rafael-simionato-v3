@@ -5,13 +5,14 @@
 
 .content {
   display: grid;
-  gap: 96px;
+  gap: 6rem;
   grid-template-columns: 1fr 1fr;
   justify-content: space-between;
   align-items: flex-start;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
+    gap: 4rem;
   }
 }
 
@@ -64,6 +65,7 @@
   }
 
   &.notAllowed {
+    opacity: 0.5;
     border: 2px solid var(--black-light);
     cursor: not-allowed;
     box-shadow: initial;
@@ -164,7 +166,7 @@
     transition: transform 0.3s ease;
 
     &:hover {
-      transform: scale(1.1);
+      transform: scale(1.05);
     }
   }
 }
@@ -175,6 +177,15 @@
   align-items: center;
   gap: 2rem;
   margin-top: 4rem;
+
+  a {
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
 
   .socials__profile {
     border-radius: 50%;
