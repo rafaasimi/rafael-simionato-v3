@@ -1,11 +1,18 @@
 import "../styles/globals.scss";
 import styles from "../styles/app.module.scss";
+import "nprogress/nprogress.css";
 
 import type { AppProps } from "next/app";
 
-import Particles from "react-particles-js";
 import React from "react";
 import Head from "next/head";
+import Particles from "react-particles-js";
+import NProgress from "nprogress";
+import Router from "next/router";
+
+Router.events.on('routeChangeStart', () => NProgress.start())
+Router.events.on('routeChangeComplete', () => NProgress.done())
+Router.events.on('routeChangeError', () => NProgress.done())
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
