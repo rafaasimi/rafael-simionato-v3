@@ -1,6 +1,12 @@
+#homepage {
+  width: 100%;
+  height: 100%;
+}
+
 .container {
   max-width: 1440px;
   margin: 0 auto;
+  height: 100%;
 }
 
 .content {
@@ -9,11 +15,20 @@
   grid-template-columns: 1fr 1fr;
   justify-content: space-between;
   align-items: flex-start;
+  height: 100%;
+
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     gap: 4rem;
   }
+}
+
+.navigationContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .navigation {
