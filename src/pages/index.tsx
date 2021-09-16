@@ -28,7 +28,7 @@ const Home: NextPage = () => {
     <section id={styles.homepage}>
       <div className={styles.container}>
         <div className={styles.content}>
-          <div>
+          <div className={styles.navigationContainer}>
             <div
               className={`${styles.content__navigation} animate__animated animate__bounceInLeft`}
             >
@@ -49,7 +49,7 @@ const Home: NextPage = () => {
                   </div>
                 </a>
 
-                <Link href="" passHref>
+                <Link href="/" passHref>
                   <div
                     className={`${styles.nav__card} ${styles.blog} ${styles.notAllowed}`}
                   >
@@ -62,7 +62,7 @@ const Home: NextPage = () => {
                   </div>
                 </Link>
 
-                <Link href="" passHref>
+                <Link href="/" passHref>
                   <div
                     className={`${styles.nav__card} ${styles.resume} ${styles.notAllowed}`}
                   >
