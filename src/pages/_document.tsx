@@ -9,7 +9,7 @@ export default class MyDocument extends Document {
           {/* <!-- Primary Meta Tags --> */}
           <meta name="title" content="Rafael Simionato - Front-end Developer" />
           <meta name="description" content="I’m passionate about front-end development and how everything can be I transformed through lines of code on amazing screens." />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <meta name="theme-color" content="#00b4db" />
 
           {/* <!-- Open Graph / Facebook --> */}
           <meta property="og:type" content="website" />

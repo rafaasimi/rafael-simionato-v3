@@ -20,6 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <main>
         <Head>
           <title>Rafael Simionato - Front-end Developer</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         </Head>
         <Component {...pageProps} />
         <Particles
