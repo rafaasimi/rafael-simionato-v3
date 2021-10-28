@@ -24,34 +24,31 @@ import windowsImg from "../assets/technologies/windows.svg";
 import vscodeImg from "../assets/technologies/vscode.svg";
 
 const Home: NextPage = () => {
-
   function AgeCalculator() {
-    const dataNasc = "07/10/1996"
-     let dataAtual = new Date();
- let anoAtual = dataAtual.getFullYear();
- let anoNascParts = dataNasc.split('/');
- let diaNasc =anoNascParts[0];
- let mesNasc =anoNascParts[1];
- let anoNasc =anoNascParts[2];
- let idade = anoAtual - anoNasc;
- let mesAtual = dataAtual.getMonth() + 1; 
- //Se mes atual for menor que o nascimento, nao fez aniversario ainda;  
- if(mesAtual < mesNasc){
- idade--; 
- } else {
- //Se estiver no mes do nascimento, verificar o dia
- if(mesAtual == mesNasc){ 
- if(new Date().getDate() < diaNasc ){ 
- //Se a data atual for menor que o dia de nascimento ele ainda nao fez aniversario
- idade--; 
- }
- }
- } 
- return idade; 
+    const dataNasc = "07/10/1996";
+    let dataAtual = new Date();
+    let anoAtual = dataAtual.getFullYear();
+    let anoNascParts = dataNasc.split("/");
+    let diaNasc = parseInt(anoNascParts[0]);
+    let mesNasc = parseInt(anoNascParts[1]);
+    let anoNasc = parseInt(anoNascParts[2]);
+    let idade = anoAtual - anoNasc;
+    let mesAtual = dataAtual.getMonth() + 1;
+    
+    //Se mes atual for menor que o nascimento, nao fez aniversario ainda;
+    if (mesAtual < mesNasc) {
+      idade--;
+    } else {
+      //Se estiver no mes do nascimento, verificar o dia
+      if (mesAtual == mesNasc) {
+        if (new Date().getDate() < diaNasc) {
+          //Se a data atual for menor que o dia de nascimento ele ainda nao fez aniversario
+          idade--;
+        }
+      }
+    }
+    return idade;
   }
-
-  
-  
 
   return (
     <section id={styles.homepage}>
@@ -147,8 +144,10 @@ const Home: NextPage = () => {
             </p>
             <p>
               I’m currently a Front-end Developer focusing on Web development. I
-              am {AgeCalculator()} years old and living in Araras, São Paulo - Brazil. I
-              currently work at <a href="https://compassouol.com/" target="_new">Compasso UOL
+              am {AgeCalculator()} years old and living in Araras, São Paulo -
+              Brazil. I currently work at{" "}
+              <a href="https://compassouol.com/" target="_new">
+                Compasso UOL
               </a>
               , a UOL Group company, focused on software and solutions
               development.
