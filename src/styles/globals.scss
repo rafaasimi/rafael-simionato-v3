@@ -79,9 +79,19 @@ img {
   }
 }
 
-::-webkit-scrollbar-track {
-  background-color: var(--blue-light);
+::-webkit-scrollbar {
+  width: 4px;
 }
+
+::-webkit-scrollbar-track {
+  background-color: var(--black-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(var(--blue-light), var(--blue));
+}
+
+
 
 .animate__animated.animate__bounceInLeft,
 .animate__animated.animate__bounceInRight {

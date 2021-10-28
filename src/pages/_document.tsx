@@ -6,10 +6,13 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"/>
+
           {/* <!-- Primary Meta Tags --> */}
           <meta name="title" content="Rafael Simionato - Front-end Developer" />
           <meta name="description" content="I’m passionate about front-end development and how everything can be I transformed through lines of code on amazing screens." />
-          <meta name="theme-color" content="#00b4db" />
+          <meta name="theme-color" content="#0083b0" />
 
           {/* <!-- Open Graph / Facebook --> */}
           <meta property="og:type" content="website" />
@@ -27,8 +30,7 @@ export default class MyDocument extends Document {
           
           <link rel="shortcut icon" href="/favicon.png" type="image/png" />
 
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"/>
+          
           <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet"/>
         </Head>
         <body>
