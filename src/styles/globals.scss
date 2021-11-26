@@ -52,6 +52,17 @@ a {
   text-decoration: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  letter-spacing: normal;
+}
+
 img {
   -webkit-user-drag: none;
   -khtml-user-drag: none;
@@ -91,11 +102,7 @@ img {
   background-image: linear-gradient(var(--blue-light), var(--blue));
 }
 
-
-
 .animate__animated.animate__bounceInLeft,
 .animate__animated.animate__bounceInRight {
   --animate-duration: 0.8s;
 }
-
-
