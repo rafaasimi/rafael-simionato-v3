@@ -1,6 +1,7 @@
 #homepage {
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 .container {
@@ -17,10 +18,9 @@
   align-items: flex-start;
   height: 100%;
 
-
   @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-    gap: 4rem;
+    display: flex;
+    flex-direction: column-reverse;
   }
 }
 
@@ -28,7 +28,12 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;
   height: 100%;
+
+  @media (max-width: 769px) {
+    height: initial;
+  }
 }
 
 .navigation {
@@ -62,6 +67,7 @@
 }
 
 .nav__card {
+  height: 100%;
   position: relative;
   border-radius: 8px;
   background-color: var(--black-light);
@@ -117,6 +123,12 @@
   }
 }
 
+.content__navigation {
+  @media (max-width: 769px) {
+    display: none;
+  }
+}
+
 .content__navigation,
 .content__description {
   h3 {
@@ -146,7 +158,6 @@
     font-size: 1rem;
     line-height: 140%;
     color: var(--text-white);
-    text-align: justify;
 
     + p {
       margin-top: 2rem;
@@ -214,6 +225,11 @@
     gap: 0.5rem;
     justify-content: flex-start;
     align-items: center;
+
+    > div {
+      width: 16px;
+      height: 16px;
+    }
   }
 
   .socials__icons img {
