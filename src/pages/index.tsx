@@ -34,7 +34,7 @@ const Home: NextPage = () => {
     let anoNasc = parseInt(anoNascParts[2]);
     let idade = anoAtual - anoNasc;
     let mesAtual = dataAtual.getMonth() + 1;
-    
+
     //Se mes atual for menor que o nascimento, nao fez aniversario ainda;
     if (mesAtual < mesNasc) {
       idade--;
@@ -143,13 +143,10 @@ const Home: NextPage = () => {
               be I transformed through lines of code on amazing screens.
             </p>
             <p>
-              I’m currently a Front-end Developer focusing on Web development. I
-              am {AgeCalculator()} years old and living in Araras, São Paulo -
-              Brazil. I currently work at{" "}
-              <a href="https://compassouol.com/" target="_new">
-                Compasso UOL
-              </a>
-              , a UOL Group company, focused on software and solutions
+              I’m currently a Front-end Developer focusing on Web development.
+              <br/>
+              I am {AgeCalculator()} years old and living in Araras, São Paulo -
+              Brazil. I currently work at <a href="https://compass.uol/" target="_new">Compass.uol</a>, a UOL Group company, focused on software and solutions
               development.
             </p>
             <div className={styles.technologies}>
